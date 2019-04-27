@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f8a3a45890744d1a90e9837f9d6473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTime: 4
+  cooldownTime: 0.5
   coinPrefab: {fileID: 7482495670956666121, guid: ed03f95fbb5554dad97522de69ab3e22,
     type: 3}
   coinPool: {fileID: 556737270}
