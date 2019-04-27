@@ -7,22 +7,34 @@ public class ObjectPool : MonoBehaviour {
     private Dictionary<GameObject, List<ObjectPoolItem>> poolDict = new Dictionary<GameObject, List<ObjectPoolItem>>();
 
     public ObjectPoolItem CreateItemToPool(GameObject type) {
-        ObjectPoolItem thisPoolItem = new ObjectPoolItem(
-            Instantiate(type),
-            this
-        );
-        if (!poolDict.ContainsKey(type)) {
-            poolDict[type] = new List<ObjectPoolItem>();
-        }
+        ObjectPoolItem thisPoolItem = new ObjectPoolItem(Instantiate(type));
+        ObjectPoolReference thisPoolReference = thisPoolItem.itemInstance.AddComponent<ObjectPoolReference>();
+        
         AddItemToPool(type,thisPoolItem);
         return thisPoolItem;
     }
 
+    public void CreatePool(GameObject type) {
+        if (!PoolExists(type)) {
+            poolDict[type] = new List<ObjectPoolItem>();
+        }
+    }
+
+    public bool PoolExists(GameObject type) {
+        return poolDict.ContainsKey(type);
+    }
+
     public void AddItemToPool(GameObject type, ObjectPoolItem poolItem) {
+        if (!PoolExists(type)) {
+            poolDict[type] = new List<ObjectPoolItem>();
+        }
         poolDict[type].Add(poolItem);
     }
+
     public void RemoveItemFromPool(GameObject type, ObjectPoolItem poolItem) {
-        poolDict[type].Remove(poolItem);
+        if (PoolExists(type)) {
+            poolDict[type].Remove(poolItem);   
+        }
     }
 
     public void ClearAllPools() {
@@ -52,9 +64,13 @@ public class ObjectPool : MonoBehaviour {
 
     public GameObject GetObjectFromPool(GameObject type, Vector3 position, Quaternion rotation, Transform parent) {
         ObjectPoolItem returnItem = null;
-        if (poolDict[type].Count > 0) { // We have an object in our pool to grab
-            returnItem = poolDict[type][0];
-        } else { // Gotta create one and return it
+        if (PoolExists(type)) {
+            if (poolDict[type].Count > 0) {
+                returnItem = poolDict[type][0];
+            } else {
+                returnItem = CreateItemToPool(type);
+            }
+        } else {
             returnItem = CreateItemToPool(type);
         }
         if (returnItem != null) {
@@ -71,10 +87,8 @@ public class ObjectPool : MonoBehaviour {
 [System.Serializable]
 public class ObjectPoolItem {
     public GameObject itemInstance {get;}
-    public ObjectPool itemObjectPool {get;}
 
-    public ObjectPoolItem(GameObject instance, ObjectPool objectPool) {
+    public ObjectPoolItem(GameObject instance) {
         itemInstance = instance;
-        itemObjectPool = objectPool;
     }
 }

@@ -421,8 +421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d704f14cceea4e959eee3def36e2b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolList: []
-  maxItemsInPool: 20
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,9 +1100,22 @@ PrefabInstance:
       propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 30440491}
+    - target: {fileID: 692105350, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateUI
+      objectReference: {fileID: 0}
     - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
       propertyPath: coinPool
       value: 
       objectReference: {fileID: 556737270}
+    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 1321914302992748513, guid: ed03f95fbb5554dad97522de69ab3e22,
+        type: 3}
+    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: throwSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}

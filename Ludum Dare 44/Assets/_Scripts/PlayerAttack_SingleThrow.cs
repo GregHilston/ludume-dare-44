@@ -53,11 +53,13 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
         // Using KeyCode.E for testing purposes. Will replace this for better input button later.
         if (Input.GetKeyDown(KeyCode.E)) {
             GameObject thrownCoinObject = coinPool.GetObjectFromPool(coinPrefab.gameObject,transform.position,transform.rotation);
-            Coin thrownCoin = thrownCoinObject.GetComponent<Coin>();
-            if (thrownCoin != null) {
-                thrownCoin.ShootCoin(throwSpeed);
+            if (thrownCoinObject != null) {
+                Coin thrownCoin = thrownCoinObject.GetComponent<Coin>();
+                if (thrownCoin != null) {
+                    thrownCoin.ShootCoin(throwSpeed);
+                }
+                ResetTimer();
             }
-            ResetTimer();
         }
     }
 
