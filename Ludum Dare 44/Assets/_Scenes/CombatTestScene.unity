@@ -1096,26 +1096,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 692105350, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
-      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 30440491}
-    - target: {fileID: 692105350, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
-      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateUI
-      objectReference: {fileID: 0}
     - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
       propertyPath: coinPool
       value: 
       objectReference: {fileID: 556737270}
-    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
-      propertyPath: coinPrefab
-      value: 
-      objectReference: {fileID: 1321914302992748513, guid: ed03f95fbb5554dad97522de69ab3e22,
+    - target: {fileID: 6891482792962350108, guid: a38ffa918be2c458786c5bda1d93730a,
         type: 3}
-    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
-      propertyPath: throwSpeed
-      value: 5
+      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 30440491}
+    - target: {fileID: 6891482792962350108, guid: a38ffa918be2c458786c5bda1d93730a,
+        type: 3}
+      propertyPath: startingCurrency
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}

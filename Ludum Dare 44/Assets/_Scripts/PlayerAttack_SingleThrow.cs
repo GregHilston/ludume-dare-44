@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerAttack_SingleThrow : MonoBehaviour {
 
@@ -16,12 +17,16 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
     [SerializeField]
     private ObjectPool coinPool;
 
-    void Start() {
+    public UnityObjEvent onThrowCoin;
 
+    private PlayerCurrency currency;
+
+    void Start() {
+        Initialize();
     }
 
     void Initialize() {
-
+        currency = GetComponent<PlayerCurrency>();
     }
 
     void Update() {
@@ -50,16 +55,21 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
     }
 
     void DoAttack() {
-        // Using KeyCode.E for testing purposes. Will replace this for better input button later.
-        if (Input.GetKeyDown(KeyCode.E)) {
-            GameObject thrownCoinObject = coinPool.GetObjectFromPool(coinPrefab.gameObject,transform.position,transform.rotation);
-            if (thrownCoinObject != null) {
-                Coin thrownCoin = thrownCoinObject.GetComponent<Coin>();
-                if (thrownCoin != null) {
-                    thrownCoin.ShootCoin(throwSpeed);
+        if (currency != null) {
+            // Using KeyCode.E for testing purposes. Will replace this for better input button later.
+            if (currency.GetCurrency() > 0 && Input.GetKeyDown(KeyCode.E)) {
+                GameObject thrownCoinObject = coinPool.GetObjectFromPool(coinPrefab.gameObject,transform.position,transform.rotation);
+                if (thrownCoinObject != null) {
+                    Coin thrownCoin = thrownCoinObject.GetComponent<Coin>();
+                    if (thrownCoin != null) {
+                        thrownCoin.ShootCoin(throwSpeed);
+                        onThrowCoin.Invoke(-1);
+                    }
+                    ResetTimer();
                 }
-                ResetTimer();
             }
+        } else  {
+            Debug.LogError(gameObject.name + " must have a PlayerCurrency Component");
         }
     }
 

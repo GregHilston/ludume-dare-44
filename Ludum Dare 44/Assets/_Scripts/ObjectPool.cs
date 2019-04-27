@@ -63,7 +63,7 @@ public class ObjectPool : MonoBehaviour {
     }
 
     public GameObject GetObjectFromPool(GameObject type, Vector3 position, Quaternion rotation) {
-        return GetObjectFromPool(type, Vector3.zero,rotation, transform);
+        return GetObjectFromPool(type, position, rotation, transform);
     }
 
     public GameObject GetObjectFromPool(GameObject type, Vector3 position, Quaternion rotation, Transform parent) {
