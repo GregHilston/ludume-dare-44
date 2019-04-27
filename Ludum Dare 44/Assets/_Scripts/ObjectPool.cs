@@ -20,6 +20,11 @@ public class ObjectPool : MonoBehaviour {
         poolList.Clear();
     }
 
+    public void MoveItemToEnd(ObjectPoolItem poolItem) {
+        poolList.Remove(poolItem);
+        poolList.Add(poolItem);
+    }
+
     public bool AtCapacity() {
         return poolList.Count == maxItemsInPool;
     }
@@ -47,9 +52,13 @@ public class ObjectPool : MonoBehaviour {
                     if (mustBeState) {
                         if (poolItem.itemInstance.activeInHierarchy == state) {
                             returnItem = poolItem.itemInstance;
+                            MoveItemToEnd(poolItem);
+                            break;
                         }
                     } else {
                         returnItem = poolItem.itemInstance;
+                        MoveItemToEnd(poolItem);
+                        break;
                     }
                 }
             }
@@ -57,6 +66,7 @@ public class ObjectPool : MonoBehaviour {
         if (returnItem != null) {
             returnItem.transform.position = position;
             returnItem.transform.rotation = rotation;
+            returnItem.SetActive(true);
         }
         return returnItem;
     }

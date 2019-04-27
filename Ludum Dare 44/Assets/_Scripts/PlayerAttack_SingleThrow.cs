@@ -49,7 +49,7 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
     void DoAttack() {
         // Using KeyCode.E for testing purposes. Will replace this for better input button later.
         if (Input.GetKeyDown(KeyCode.E)) {
-            coinPool.GetObjectFromPool(coinPrefab,transform.position,Quaternion.identity);
+            coinPool.GetObjectFromPool(coinPrefab,transform.position,transform.rotation,true,false);
             ResetTimer();
         }
     }
