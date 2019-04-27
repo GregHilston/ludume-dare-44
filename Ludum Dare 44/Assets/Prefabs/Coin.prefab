@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7482495670956666132}
   - component: {fileID: 7482495670956666135}
   - component: {fileID: 7482495670956666134}
-  - component: {fileID: 3628542558880364126}
   - component: {fileID: 5677561227617395009}
+  - component: {fileID: 1321914302992748513}
+  - component: {fileID: 8084280412512053855}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -110,19 +111,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3628542558880364126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7482495670956666121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c34fcc46238f249a1a7efeb3f8430dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwSpeed: 5000
 --- !u!114 &5677561227617395009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +124,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 1
+  onObjectHidden:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8084280412512053855}
+        m_MethodName: returnToPool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1321914302992748513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7482495670956666121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0574add72678b45b49e59d9ef4936f61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8084280412512053855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7482495670956666121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98cb4dfaf1ea34a88b317360ed455c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPool: {fileID: 0}
+  objectType: {fileID: 0}

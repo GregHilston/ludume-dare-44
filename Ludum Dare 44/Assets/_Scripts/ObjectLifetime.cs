@@ -1,14 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ObjectLifetime : MonoBehaviour {
 
     [SerializeField]
-    private float lifeTime = 2f;
+    [Tooltip("The lifetime of the object. Set to 0 for indefinite lifetime.")]
+    private float lifeTime = 0;
     private float lifeTimer;
 
+    public UnityEvent onObjectHidden;
+
     void Start() {
+    }
+
+    void OnEnable() {
         ResetTimer();
     }
 
@@ -21,10 +28,17 @@ public class ObjectLifetime : MonoBehaviour {
     }
 
     void HideAfterLifetime() {
-        if (lifeTimer > 0) {
-            lifeTimer -= Time.deltaTime;
-        } else {
-            gameObject.SetActive(false);
+        if (lifeTime != 0) {
+            if (lifeTimer > 0) {
+                lifeTimer -= Time.deltaTime;
+            } else {
+                HideItem();
+            }
         }
+    }
+
+    void HideItem() {
+        onObjectHidden.Invoke();
+        gameObject.SetActive(false);
     }
 }

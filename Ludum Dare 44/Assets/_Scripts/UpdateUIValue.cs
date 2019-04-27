@@ -15,7 +15,7 @@ public class UpdateUIValue : MonoBehaviour {
     [TextArea]
     private string postText;
 
-    void Start() {
+    void Awake() {
         tmpro = GetComponent<TextMeshProUGUI>();
     }
 
