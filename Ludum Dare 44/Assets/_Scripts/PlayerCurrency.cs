@@ -20,6 +20,15 @@ public class PlayerCurrency : MonoBehaviour {
         ChangeCurrency(startingCurrency);
     }
 
+    void Update() {
+        if (Input.GetKey(KeyCode.V)) {
+            ChangeCurrency(-1);
+        }
+        if (Input.GetKey(KeyCode.B)) {
+            ChangeCurrency(1);
+        }
+    }
+
     public int GetCurrency() {
         return currencyAmount;
     }
