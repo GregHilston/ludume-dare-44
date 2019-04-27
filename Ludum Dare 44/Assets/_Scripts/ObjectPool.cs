@@ -8,7 +8,11 @@ public class ObjectPool : MonoBehaviour {
 
     public ObjectPoolItem CreateItemToPool(GameObject type) {
         ObjectPoolItem thisPoolItem = new ObjectPoolItem(Instantiate(type));
-        ObjectPoolReference thisPoolReference = thisPoolItem.itemInstance.AddComponent<ObjectPoolReference>();
+        ObjectPoolReference thisPoolReference = thisPoolItem.itemInstance.GetComponent<ObjectPoolReference>();
+        if (thisPoolReference != null) {
+            thisPoolReference.objectPool = this;
+            thisPoolReference.objectType = type;
+        } 
         
         AddItemToPool(type,thisPoolItem);
         return thisPoolItem;

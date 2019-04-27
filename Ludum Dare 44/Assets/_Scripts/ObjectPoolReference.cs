@@ -9,6 +9,7 @@ public class ObjectPoolReference : MonoBehaviour {
 
     public void returnToPool() {
         objectPool.AddItemToPool(objectType, new ObjectPoolItem(gameObject));
+        gameObject.SetActive(false);
     }
 
     public ObjectPoolReference(GameObject object_type, ObjectPool object_pool) {

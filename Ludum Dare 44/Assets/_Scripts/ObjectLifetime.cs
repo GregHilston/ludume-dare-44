@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ObjectLifetime : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class ObjectLifetime : MonoBehaviour {
     [Tooltip("The lifetime of the object. Set to 0 for indefinite lifetime.")]
     private float lifeTime = 0;
     private float lifeTimer;
+
+    public UnityEvent onObjectHidden;
 
     void Start() {
     }
@@ -35,6 +38,7 @@ public class ObjectLifetime : MonoBehaviour {
     }
 
     void HideItem() {
+        onObjectHidden.Invoke();
         gameObject.SetActive(false);
     }
 }
