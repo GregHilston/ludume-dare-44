@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.constraints = rbConstraints;
             } else {
                 rb.velocity = Vector3.up * rb.velocity.y;
-                rb.constraints = RigidbodyConstraints.FreezeRotation;
+                rb.constraints = RigidbodyConstraints.FreezeAll;
             }  
         } else {
             Debug.LogError(gameObject.name + " does not have a Rigidbody enabled.");

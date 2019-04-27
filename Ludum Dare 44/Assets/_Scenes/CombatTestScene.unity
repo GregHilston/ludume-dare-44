@@ -378,41 +378,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4863764464172768343}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &692105349 stripped
+--- !u!1 &556737268
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4863764464864799954, guid: a38ffa918be2c458786c5bda1d93730a,
-    type: 3}
-  m_PrefabInstance: {fileID: 4863764464172768343}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &692105350
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 556737269}
+  - component: {fileID: 556737270}
+  m_Layer: 0
+  m_Name: CoinPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &556737269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556737268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &556737270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692105349}
+  m_GameObject: {fileID: 556737268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095cd850fd012478985e438b5749161c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d704f14cceea4e959eee3def36e2b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnCurrencyAmountChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 30440491}
-        m_MethodName: UpdateUI
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  startingCurrency: 500
+  poolList: []
+  maxItemsInPool: 20
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,5 +1098,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 692105350, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 30440491}
+    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: coinPool
+      value: 
+      objectReference: {fileID: 556737270}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
