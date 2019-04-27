@@ -366,34 +366,12 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &456335019 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4863764464557392636, guid: a38ffa918be2c458786c5bda1d93730a,
-    type: 3}
-  m_PrefabInstance: {fileID: 4863764464172768343}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &456335020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4863764464557392635, guid: a38ffa918be2c458786c5bda1d93730a,
     type: 3}
   m_PrefabInstance: {fileID: 4863764464172768343}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &456335021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456335019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3f8a3a45890744d1a90e9837f9d6473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 0.5
-  coinPrefab: {fileID: 7482495670956666121, guid: ed03f95fbb5554dad97522de69ab3e22,
-    type: 3}
-  coinPool: {fileID: 556737270}
 --- !u!4 &497403754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4863764464531036989, guid: a38ffa918be2c458786c5bda1d93730a,
@@ -445,41 +423,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolList: []
   maxItemsInPool: 20
---- !u!1 &692105349 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4863764464864799954, guid: a38ffa918be2c458786c5bda1d93730a,
-    type: 3}
-  m_PrefabInstance: {fileID: 4863764464172768343}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &692105350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692105349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095cd850fd012478985e438b5749161c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnCurrencyAmountChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 30440491}
-        m_MethodName: UpdateUI
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  startingCurrency: 500
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,5 +1098,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 692105350, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 30440491}
+    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: coinPool
+      value: 
+      objectReference: {fileID: 556737270}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}

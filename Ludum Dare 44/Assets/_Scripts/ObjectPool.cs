@@ -67,6 +67,10 @@ public class ObjectPool : MonoBehaviour {
             returnItem.transform.position = position;
             returnItem.transform.rotation = rotation;
             returnItem.SetActive(true);
+            ObjectLifetime returnItemLifetime = returnItem.GetComponent<ObjectLifetime>();
+            if (returnItemLifetime != null) {
+                returnItemLifetime.ResetTimer();
+            }
         }
         return returnItem;
     }

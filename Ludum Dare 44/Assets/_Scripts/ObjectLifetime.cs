@@ -2,17 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectLifetime : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class ObjectLifetime : MonoBehaviour {
+
+    [SerializeField]
+    private float lifeTime = 2f;
+    private float lifeTimer;
+
+    void Start() {
+        ResetTimer();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void ResetTimer() {
+        lifeTimer = lifeTime;
+    }
+
+    void Update() {
+        HideAfterLifetime();
+    }
+
+    void HideAfterLifetime() {
+        if (lifeTimer > 0) {
+            lifeTimer -= Time.deltaTime;
+        } else {
+            gameObject.SetActive(false);
+        }
     }
 }

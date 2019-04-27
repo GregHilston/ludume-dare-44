@@ -10,17 +10,11 @@ public class CoinTrajectory : MonoBehaviour {
     [SerializeField]
     private float throwSpeed;
 
-    [SerializeField]
-    private float lifeTime = 2f;
-    private float lifeTimer;
-
     void Start() {
         rb = GetComponent<Rigidbody>();
-        lifeTimer = lifeTime;
     }
 
     void Update() {
-        HideAfterLifetime();
     }
 
     void FixedUpdate() {
@@ -32,14 +26,6 @@ public class CoinTrajectory : MonoBehaviour {
             rb.velocity = (transform.forward * throwSpeed * Time.deltaTime);
         } else {
             Debug.LogError("No Rigidbody attached to " + gameObject.name);
-        }
-    }
-
-    void HideAfterLifetime() {
-        if (lifeTimer > 0) {
-            lifeTimer -= Time.deltaTime;
-        } else {
-            gameObject.SetActive(false);
         }
     }
 
