@@ -9,7 +9,10 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
     private float cooldownTimer = 0;
 
     [SerializeField]
-    private GameObject coinPrefab;
+    private float throwSpeed = 5000;
+
+    [SerializeField]
+    private Coin coinPrefab;
     [SerializeField]
     private ObjectPool coinPool;
 
@@ -49,7 +52,11 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
     void DoAttack() {
         // Using KeyCode.E for testing purposes. Will replace this for better input button later.
         if (Input.GetKeyDown(KeyCode.E)) {
-            coinPool.GetObjectFromPool(coinPrefab,transform.position,transform.rotation,true,false);
+            GameObject thrownCoinObject = coinPool.GetObjectFromPool(coinPrefab.gameObject,transform.position,transform.rotation);
+            Coin thrownCoin = thrownCoinObject.GetComponent<Coin>();
+            if (thrownCoin != null) {
+                thrownCoin.ShootCoin(throwSpeed);
+            }
             ResetTimer();
         }
     }

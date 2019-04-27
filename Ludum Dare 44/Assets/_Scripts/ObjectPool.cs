@@ -4,75 +4,66 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour {
 
-    [SerializeField]
-    private List<ObjectPoolItem> poolList = new List<ObjectPoolItem>();
-    [SerializeField]
-    private int maxItemsInPool = 10;
-    [SerializeField]
+    private Dictionary<GameObject, List<ObjectPoolItem>> poolDict = new Dictionary<GameObject, List<ObjectPoolItem>>();
 
-    public void AddItemToPool(ObjectPoolItem poolItem) {
-        if (poolList.Count < maxItemsInPool) {
-            poolList.Add(poolItem);
+    public ObjectPoolItem CreateItemToPool(GameObject type) {
+        ObjectPoolItem thisPoolItem = new ObjectPoolItem(
+            Instantiate(type),
+            this
+        );
+        if (!poolDict.ContainsKey(type)) {
+            poolDict[type] = new List<ObjectPoolItem>();
+        }
+        AddItemToPool(type,thisPoolItem);
+        return thisPoolItem;
+    }
+
+    public void AddItemToPool(GameObject type, ObjectPoolItem poolItem) {
+        poolDict[type].Add(poolItem);
+    }
+    public void RemoveItemFromPool(GameObject type, ObjectPoolItem poolItem) {
+        poolDict[type].Remove(poolItem);
+    }
+
+    public void ClearAllPools() {
+        foreach(GameObject key in poolDict.Keys) {
+            ClearPool(key);
         }
     }
 
-    public void ClearPool() {
-        poolList.Clear();
+    public void ClearPool(GameObject type) {
+        foreach(ObjectPoolItem poolItem in poolDict[type]) {
+            Destroy(poolItem.itemInstance);
+        }
+        poolDict[type].Clear();
     }
 
-    public void MoveItemToEnd(ObjectPoolItem poolItem) {
-        poolList.Remove(poolItem);
-        poolList.Add(poolItem);
+    public GameObject GetObjectFromPool(GameObject type) {
+        return GetObjectFromPool(type, Vector3.zero,Quaternion.identity, transform);
     }
 
-    public bool AtCapacity() {
-        return poolList.Count == maxItemsInPool;
+    public GameObject GetObjectFromPool(GameObject type, Vector3 position) {
+        return GetObjectFromPool(type, position,Quaternion.identity, transform);
     }
 
-    public GameObject GetObjectFromPool(GameObject type, bool mustBeState = false, bool state = false) {
-        return GetObjectFromPool(type, Vector3.zero,Quaternion.identity,mustBeState,state);
+    public GameObject GetObjectFromPool(GameObject type, Vector3 position, Quaternion rotation) {
+        return GetObjectFromPool(type, Vector3.zero,rotation, transform);
     }
 
-    public GameObject GetObjectFromPool(GameObject type, Vector3 position, bool mustBeState = false, bool state = false) {
-        return GetObjectFromPool(type, position,Quaternion.identity,mustBeState,state);
-    }
-
-    public GameObject GetObjectFromPool(GameObject type, Quaternion rotation, bool mustBeState = false, bool state = false) {
-        return GetObjectFromPool(type, Vector3.zero,rotation,mustBeState,state);
-    }
-
-    public GameObject GetObjectFromPool(GameObject type, Vector3 position, Quaternion rotation, bool mustBeState = false, bool state = false) {
-        GameObject returnItem = null;
-        if (!AtCapacity()) {
-            returnItem = Instantiate(type,position,rotation,transform);
-            AddItemToPool(new ObjectPoolItem(returnItem,type));
-        } else {
-            foreach(ObjectPoolItem poolItem in poolList) {
-                if (poolItem.itemSource == type) {
-                    if (mustBeState) {
-                        if (poolItem.itemInstance.activeInHierarchy == state) {
-                            returnItem = poolItem.itemInstance;
-                            MoveItemToEnd(poolItem);
-                            break;
-                        }
-                    } else {
-                        returnItem = poolItem.itemInstance;
-                        MoveItemToEnd(poolItem);
-                        break;
-                    }
-                }
-            }
+    public GameObject GetObjectFromPool(GameObject type, Vector3 position, Quaternion rotation, Transform parent) {
+        ObjectPoolItem returnItem = null;
+        if (poolDict[type].Count > 0) { // We have an object in our pool to grab
+            returnItem = poolDict[type][0];
+        } else { // Gotta create one and return it
+            returnItem = CreateItemToPool(type);
         }
         if (returnItem != null) {
-            returnItem.transform.position = position;
-            returnItem.transform.rotation = rotation;
-            returnItem.SetActive(true);
-            ObjectLifetime returnItemLifetime = returnItem.GetComponent<ObjectLifetime>();
-            if (returnItemLifetime != null) {
-                returnItemLifetime.ResetTimer();
-            }
+            returnItem.itemInstance.transform.position = position;
+            returnItem.itemInstance.transform.rotation = rotation;
+            RemoveItemFromPool(type,returnItem);
+            returnItem.itemInstance.SetActive(true);
         }
-        return returnItem;
+        return returnItem.itemInstance;
     }
 
 }
@@ -80,10 +71,10 @@ public class ObjectPool : MonoBehaviour {
 [System.Serializable]
 public class ObjectPoolItem {
     public GameObject itemInstance {get;}
-    public GameObject itemSource {get;}
+    public ObjectPool itemObjectPool {get;}
 
-    public ObjectPoolItem(GameObject instance, GameObject source) {
+    public ObjectPoolItem(GameObject instance, ObjectPool objectPool) {
         itemInstance = instance;
-        itemSource = source;
+        itemObjectPool = objectPool;
     }
 }
