@@ -1178,6 +1178,11 @@ PrefabInstance:
       propertyPath: coinPool
       value: 
       objectReference: {fileID: 556737270}
+    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 2931291183072142069, guid: 5a1375c916343714fac5f8a615ffc7c2,
+        type: 3}
     - target: {fileID: 6891482792962350108, guid: a38ffa918be2c458786c5bda1d93730a,
         type: 3}
       propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
