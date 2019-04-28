@@ -105,8 +105,6 @@ GameObject:
   - component: {fileID: 4863764464557392633}
   - component: {fileID: 4863764464557392634}
   - component: {fileID: 4863764464557392614}
-  - component: {fileID: 456335021}
-  - component: {fileID: 6891482792962350108}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -219,68 +217,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerType: 0
   moveSpeed: 10
---- !u!114 &456335021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4863764464557392636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47d46e6955964e8fbd5dfb5ef9f9966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 0
-  throwSpeed: 5000
-  coinPrefab: {fileID: 2931291183072142069, guid: 5a1375c916343714fac5f8a615ffc7c2,
-    type: 3}
-  coinPool: {fileID: 0}
-  onThrowCoin:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6891482792962350108}
-        m_MethodName: ChangeCurrency
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
---- !u!114 &6891482792962350108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4863764464557392636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095cd850fd012478985e438b5749161c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnCurrencyAmountChange:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: UpdateUI
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityObjEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  startingCurrency: 500
 --- !u!1 &4863764464864799954
 GameObject:
   m_ObjectHideFlags: 0

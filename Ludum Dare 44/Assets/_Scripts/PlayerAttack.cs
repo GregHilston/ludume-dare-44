@@ -35,8 +35,8 @@ public class PlayerAttack : MonoBehaviour {
 
     void Initialize() {
         currency = GetComponent<PlayerCurrency>();
-        playerAttacks.Add("Custom1",DoOneShot);
-        playerAttacks.Add("Custom2",DoMultiShot);
+        playerAttacks.Add("Right Controller Trigger", DoOneShot);
+        playerAttacks.Add("Right Controller Bumper", DoMultiShot);
     }
 
     void Update() {
@@ -46,7 +46,9 @@ public class PlayerAttack : MonoBehaviour {
     void Attack() {
         if (attackReady()) {
             foreach(string input in playerAttacks.Keys) {
-                if (Input.GetButtonDown(input)) {
+                // Debug.Log($"Checking {input} and (Input.GetAxis({input}) is {Input.GetAxis(input)} while Input.GetButton({input}) is {Input.GetButton(input)}");
+                // Beware, real shitty code on the next line, I'm lazy
+                if ((Input.GetAxis(input) > 0.0f) || (Input.GetButton(input) == true)) {
                     playerAttacks[input]();
                 }
             }
@@ -88,6 +90,7 @@ public class PlayerAttack : MonoBehaviour {
 
     void OneShot(Quaternion rotation) {
         if (currency != null) {
+            Debug.Log($"curreny {currency}");
             // Using KeyCode.E for testing purposes. Will replace this for better input button later.
             if (currency.GetCurrency() > 0) {
                 GameObject thrownCoinObject = coinPool.GetObjectFromPool(coinPrefab.gameObject,transform.position,rotation);
