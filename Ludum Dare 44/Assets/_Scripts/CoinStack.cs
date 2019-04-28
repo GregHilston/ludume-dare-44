@@ -16,7 +16,7 @@ public class CoinStack : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col) {
-        if (col.tag.Equals("Player")) {
+        if (col.GetComponent<PlayerMain>() != null) {
             onPlayerGetCoins.Invoke();
         }
     }

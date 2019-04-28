@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Slime
   maxHealth: 10
+  damageRate: 0
+  damageAmount: 1
   moveSpeed: 10
-  coinDrop: 0
   prefab: {fileID: 7503904934851779732, guid: 9089574072a444a6fbcb1beae1e8adfb, type: 3}
   staticDrops:
   - {fileID: 4414740430666289193, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}

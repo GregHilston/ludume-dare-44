@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [CreateAssetMenu(fileName = "New Enemy", menuName = "Enemy", order = 51)]
 public class EnemyObject : ScriptableObject {
@@ -20,6 +21,24 @@ public class EnemyObject : ScriptableObject {
     public int MaxHealth {
         get {
             return maxHealth;
+        }
+    }
+    
+    [SerializeField]
+    [Tooltip("Enemy Damage Rate")]
+    private float damageRate;
+    public float DamageRate {
+        get {
+            return damageRate;
+        }
+    }
+    
+    [SerializeField]
+    [Tooltip("Enemy Damage Amount")]
+    private int damageAmount;
+    public int DamageAmount {
+        get {
+            return damageAmount;
         }
     }
     
