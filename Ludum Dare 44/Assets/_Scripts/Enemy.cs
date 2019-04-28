@@ -10,7 +10,11 @@ public class Enemy : MonoBehaviour {
 
     private int curHealth;
 
-    private bool isAlive = true;
+    private bool isAlive {
+        get {
+            return curHealth > 0;
+        }
+    }
 
     public UnityEvent onEnemyDeath;
 
@@ -21,13 +25,12 @@ public class Enemy : MonoBehaviour {
     public void ChangeHealth(int amount) {
         curHealth += amount;
         curHealth = Mathf.Clamp(curHealth,0,enemy.MaxHealth);
-        if (curHealth <= 0) {
+        if (!isAlive) {
             Die();
         }
     }
 
     public void Die() {
-        isAlive = false;
         onEnemyDeath.Invoke();
     }
 
@@ -45,10 +48,12 @@ public class Enemy : MonoBehaviour {
     void OnTriggerEnter(Collider col) {
         Coin coin = col.GetComponent<Coin>();
         if (coin != null) {
-            ChangeHealth(-1);
+            ChangeHealth(coin.coinDamage);
             ObjectPoolReference opf = col.GetComponent<ObjectPoolReference>();
             if (opf != null) {
                 opf.returnToPool();
+            } else {
+                Destroy(coin.gameObject);
             }
         }
     }

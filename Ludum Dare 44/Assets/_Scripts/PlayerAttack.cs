@@ -29,6 +29,9 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField]
     private float multiShotRange = 45f;
 
+    [SerializeField]
+    private int playerDamage = 1;
+
     void Start() {
         Initialize();
     }
@@ -37,6 +40,9 @@ public class PlayerAttack : MonoBehaviour {
         currency = GetComponent<PlayerCurrency>();
         playerAttacks.Add("Right Controller Trigger", DoOneShot);
         playerAttacks.Add("Right Controller Bumper", DoMultiShot);
+        if (coinPool == null) {
+            coinPool = FindObjectOfType<ObjectPool>();
+        }
     }
 
     void Update() {
