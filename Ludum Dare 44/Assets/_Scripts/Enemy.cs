@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour {
     void OnTriggerEnter(Collider col) {
         Coin coin = col.GetComponent<Coin>();
         if (coin != null) {
-            ChangeHealth(coin.coinDamage);
+            ChangeHealth(coin.CoinDamage);
             ObjectPoolReference opf = col.GetComponent<ObjectPoolReference>();
             if (opf != null) {
                 opf.returnToPool();

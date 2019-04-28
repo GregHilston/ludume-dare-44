@@ -101,7 +101,7 @@ public class PlayerAttack : MonoBehaviour {
                 if (thrownCoinObject != null) {
                     Coin thrownCoin = thrownCoinObject.GetComponent<Coin>();
                     if (thrownCoin != null) {
-                        thrownCoin.ShootCoin(throwSpeed);
+                        thrownCoin.ShootCoin(throwSpeed,-playerDamage);
                         onThrowCoin.Invoke(-1);
                     }
                     ResetTimer();
