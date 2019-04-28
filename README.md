@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/main_menu.PNG">
+  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/main_menu.PNG">
 </p>
 
 [Source Code Available Here](https://github.com/GregHilston/ludume-dare-44)
@@ -36,9 +36,7 @@ Derek focused on writing the majority of our code, while Greg wanted to learn Bl
 
 Coin 
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/coin!.PNG">
-</p>
+<img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/coin!.PNG">
 
 Coin Rotating
 
@@ -46,9 +44,7 @@ Coin Rotating
 
 Slimes
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/slimes!.PNG">
-</p>
+<img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/slimes!.PNG">
 
 Slime Moving
 
@@ -65,9 +61,7 @@ Meet Marsh, Our Stretch Goal Character
 
 Using Material Nodes
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/material_nodes.PNG">
-</p>
+<img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/material_nodes.PNG">
 
 ## Team Members
 
