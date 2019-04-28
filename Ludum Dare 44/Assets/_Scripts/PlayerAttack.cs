@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour {
     void Initialize() {
         currency = GetComponent<PlayerCurrency>();
         playerAttacks.Add("Left Controller Trigger", DoOneShot);
-        playerAttacks.Add("Custom2",DoMultiShot);
+        playerAttacks.Add("Left Controller Bumper", DoMultiShot);
     }
 
     void Update() {
@@ -46,8 +46,11 @@ public class PlayerAttack : MonoBehaviour {
     void Attack() {
         if (attackReady()) {
             foreach(string input in playerAttacks.Keys) {
-                Debug.Log($"Attack input {input} has value of {Input.GetAxis(input)}");
-                if (Input.GetAxis(input) > 0.0f) {
+                Debug.Log($"Checking {input} Input.GetButton({input}) is {Input.GetButton(input)}");
+
+                // Debug.Log($"Checking {input} and (Input.GetAxis({input}) is {Input.GetAxis(input)} while Input.GetButton({input}) is {Input.GetButton(input)}");
+                // Beware, real shitty code on the next line, I'm lazy
+                if ((Input.GetAxis(input) > 0.0f) || (Input.GetButton(input) == true)) {
                     playerAttacks[input]();
                 }
             }
