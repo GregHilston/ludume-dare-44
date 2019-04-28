@@ -57,12 +57,12 @@ public class Enemy : MonoBehaviour {
 
     public void RandomDrop() {
         int randIndex = Random.Range(0,enemy.RandomDrops.Length);
-        Instantiate(enemy.RandomDrops[randIndex],transform.position,Quaternion.identity);
+        Instantiate(enemy.RandomDrops[randIndex],transform.position,transform.rotation);
     }
 
     public void StaticDrops() {
         foreach(GameObject obj in enemy.StaticDrops) {
-            Instantiate(obj,transform.position,Quaternion.identity);
+            Instantiate(obj,transform.position,transform.rotation).SetActive(true);
         }
     }
 
