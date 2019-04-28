@@ -5850,8 +5850,19 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1179954804847122811, guid: 9e45df04279d34f488b7e345ae8b4a54,
+        type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 1117841960}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e45df04279d34f488b7e345ae8b4a54, type: 3}
+--- !u!1 &1117841960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2302688989539390139, guid: 9e45df04279d34f488b7e345ae8b4a54,
+    type: 3}
+  m_PrefabInstance: {fileID: 1117841959}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1118325617
 GameObject:
   m_ObjectHideFlags: 0
