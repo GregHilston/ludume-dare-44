@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerAttack_SingleThrow : MonoBehaviour {
+public class PlayerAttack : MonoBehaviour {
+
+    private delegate void action();
+    private Dictionary<string, action> playerAttacks = new Dictionary<string, action>();
 
     [SerializeField]
     private float cooldownTime;
@@ -21,12 +24,19 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
 
     private PlayerCurrency currency;
 
+    [SerializeField]
+    private int numShotsInMulti;
+    [SerializeField]
+    private float multiShotRange = 45f;
+
     void Start() {
         Initialize();
     }
 
     void Initialize() {
         currency = GetComponent<PlayerCurrency>();
+        playerAttacks.Add("Custom1",DoOneShot);
+        playerAttacks.Add("Custom2",DoMultiShot);
     }
 
     void Update() {
@@ -35,7 +45,11 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
 
     void Attack() {
         if (attackReady()) {
-            DoAttack();
+            foreach(string input in playerAttacks.Keys) {
+                if (Input.GetButtonDown(input)) {
+                    playerAttacks[input]();
+                }
+            }
         }
     }
 
@@ -54,11 +68,25 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
         cooldownTimer = cooldownTime;
     }
 
-    void DoAttack() {
+    void DoOneShot() {
+        OneShot(transform.rotation);
+    }
+
+    void DoMultiShot() {
+        float startingAngle = transform.rotation.eulerAngles.y - ( multiShotRange / 2);
+        float angleBetweenShots = multiShotRange / (numShotsInMulti - 1);
+
+        for (int i = 0; i < numShotsInMulti; i++) {
+            OneShot(Quaternion.Euler(Vector3.up * (startingAngle + (angleBetweenShots * i))));
+        }
+
+    }
+
+    void OneShot(Quaternion rotation) {
         if (currency != null) {
             // Using KeyCode.E for testing purposes. Will replace this for better input button later.
-            if (currency.GetCurrency() > 0 && Input.GetKeyDown(KeyCode.E)) {
-                GameObject thrownCoinObject = coinPool.GetObjectFromPool(coinPrefab.gameObject,transform.position,transform.rotation);
+            if (currency.GetCurrency() > 0) {
+                GameObject thrownCoinObject = coinPool.GetObjectFromPool(coinPrefab.gameObject,transform.position,rotation);
                 if (thrownCoinObject != null) {
                     Coin thrownCoin = thrownCoinObject.GetComponent<Coin>();
                     if (thrownCoin != null) {
@@ -72,5 +100,7 @@ public class PlayerAttack_SingleThrow : MonoBehaviour {
             Debug.LogError(gameObject.name + " must have a PlayerCurrency Component");
         }
     }
+
+
 
 }

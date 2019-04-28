@@ -228,12 +228,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4863764464557392636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3f8a3a45890744d1a90e9837f9d6473, type: 3}
+  m_Script: {fileID: 11500000, guid: c47d46e6955964e8fbd5dfb5ef9f9966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 0
   throwSpeed: 5000
-  coinPrefab: {fileID: 1321914302992748513, guid: ed03f95fbb5554dad97522de69ab3e22,
+  coinPrefab: {fileID: 2931291183072142069, guid: 5a1375c916343714fac5f8a615ffc7c2,
     type: 3}
   coinPool: {fileID: 0}
   onThrowCoin:
