@@ -64,10 +64,10 @@ Enemies Moving
   <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/enemies_moving.m4v">
 </p>
 
-Our Stretch Goal Character
+Meet Marsh, Our Stretch Goal Character
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/Marsh.m4v">
+  ![Meet Marsh, Our Stretch Goal Character](https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/marsh.gif)
 </p>
 
 Using Material Nodes
