@@ -102,7 +102,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3223548448198084959}
   - component: {fileID: 4414740430666289195}
-  - component: {fileID: 4414740430666289194}
   - component: {fileID: 1699005844915202474}
   m_Layer: 0
   m_Name: CoinStack_100
@@ -144,7 +143,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4414740430666289194
+--- !u!114 &1699005844915202474
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,11 +152,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414740430666289193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25339832eccaf4ddb8eed1fcab3195dd, type: 3}
+  m_Script: {fileID: 11500000, guid: ca0f1c10a31244a1b91971a11cc58311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactCollider: {fileID: 0}
-  onTriggerEnter:
+  onPlayerGetCoins:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1699005844915202474}
@@ -184,28 +182,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  onTriggerExit:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onTriggerStay:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1699005844915202474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4414740430666289193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca0f1c10a31244a1b91971a11cc58311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5870768517032116477
 GameObject:
   m_ObjectHideFlags: 0

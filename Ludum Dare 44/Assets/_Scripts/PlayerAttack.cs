@@ -90,8 +90,6 @@ public class PlayerAttack : MonoBehaviour {
 
     void OneShot(Quaternion rotation) {
         if (currency != null) {
-            Debug.Log($"curreny {currency}");
-            // Using KeyCode.E for testing purposes. Will replace this for better input button later.
             if (currency.GetCurrency() > 0) {
                 GameObject thrownCoinObject = coinPool.GetObjectFromPool(coinPrefab.gameObject,transform.position,rotation);
                 if (thrownCoinObject != null) {
