@@ -37,43 +37,43 @@ Derek focused on writing the majority of our code, while Greg wanted to learn Bl
 Coin 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/coin!.PNG">
+  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/coin!.PNG">
 </p>
 
 Coin Rotating
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/Coin_Rotating.m4v">
+  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/Coin_Rotating.m4v">
 </p>
 
 Slimes
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/slimes!.PNG">
+  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/slimes!.PNG">
 </p>
 
 Slime Moving
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/slime_moving.m4v">
+  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/slime_moving.m4v">
 </p>
 
 Enemies Moving
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/enemies_moving.m4v">
+  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/enemies_moving.m4v">
 </p>
 
 Our Stretch Goal Character
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/Marsh.m4v">
+  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/Marsh.m4v">
 </p>
 
 Using Material Nodes
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/material_nodes.PNG">
+  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/material_nodes.PNG">
 </p>
 
 ## Team Members
