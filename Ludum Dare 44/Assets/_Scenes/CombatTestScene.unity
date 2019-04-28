@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641275, b: 0.57481736, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -189,19 +189,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1 &30440487
@@ -443,28 +443,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
-      propertyPath: coinPool
-      value: 
-      objectReference: {fileID: 556737270}
-    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
-      propertyPath: numShotsInMulti
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
-      propertyPath: multiShotRange
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 6891482792962350108, guid: a38ffa918be2c458786c5bda1d93730a,
-        type: 3}
-      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 30440491}
-    - target: {fileID: 6891482792962350108, guid: a38ffa918be2c458786c5bda1d93730a,
-        type: 3}
-      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateUI
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
 --- !u!1001 &60199931
@@ -536,19 +514,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!4 &120867233 stripped
@@ -626,19 +604,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1001 &270210520
@@ -710,19 +688,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!4 &291181889 stripped
@@ -800,19 +778,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1 &303266991
@@ -958,19 +936,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1001 &380712240
@@ -1042,19 +1020,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1001 &455341954
@@ -1126,19 +1104,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1001 &531814593
@@ -1210,19 +1188,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1 &554009758
@@ -1493,19 +1471,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1 &772305299
@@ -1652,19 +1630,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!4 &852572309 stripped
@@ -1748,19 +1726,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1 &963194225
@@ -1863,6 +1841,18 @@ MonoBehaviour:
   target: {fileID: 1188600442}
   rotateWithTarget: 0
   positionOffset: {x: 0, y: 10, z: -10}
+--- !u!114 &1055878768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1055878768, guid: 989350724000f4b978a0883998cce12a,
+    type: 3}
+  m_PrefabInstance: {fileID: 701616107466479457}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095cd850fd012478985e438b5749161c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1059381899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3223548448198084959, guid: 747bc060bc525426eb30ceb3c17007a8,
@@ -1893,18 +1883,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 36424313}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1188600443 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6891482792962350108, guid: a38ffa918be2c458786c5bda1d93730a,
-    type: 3}
-  m_PrefabInstance: {fileID: 36424313}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 095cd850fd012478985e438b5749161c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &1188600447 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 4863764464557392633, guid: a38ffa918be2c458786c5bda1d93730a,
@@ -1980,19 +1958,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1001 &1220918355
@@ -2064,19 +2042,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!4 &1230662903 stripped
@@ -2154,19 +2132,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!4 &1252559844 stripped
@@ -2244,19 +2222,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!4 &1373431785 stripped
@@ -2346,19 +2324,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!4 &1477456879 stripped
@@ -2436,19 +2414,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!4 &1508739622 stripped
@@ -2526,19 +2504,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1 &1609843951
@@ -2700,19 +2678,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1 &1945843853
@@ -2876,19 +2854,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!1001 &2019915005
@@ -2960,19 +2938,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
 --- !u!4 &2065932950 stripped
@@ -3163,6 +3141,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1055878767, guid: 989350724000f4b978a0883998cce12a, type: 3}
+      propertyPath: coinPool
+      value: 
+      objectReference: {fileID: 556737270}
+    - target: {fileID: 1055878768, guid: 989350724000f4b978a0883998cce12a, type: 3}
+      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 30440491}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 989350724000f4b978a0883998cce12a, type: 3}
 --- !u!4 &4414740430666289197 stripped
@@ -3240,18 +3226,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
+      propertyPath: interactCollider
+      value: 
+      objectReference: {fileID: 1188600447}
+    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
+        type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1188600443}
+      objectReference: {fileID: 1055878768}
     - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
         type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeCurrency
       objectReference: {fileID: 0}
-    - target: {fileID: 4414740430666289194, guid: 747bc060bc525426eb30ceb3c17007a8,
-        type: 3}
-      propertyPath: interactCollider
-      value: 
-      objectReference: {fileID: 1188600447}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747bc060bc525426eb30ceb3c17007a8, type: 3}
