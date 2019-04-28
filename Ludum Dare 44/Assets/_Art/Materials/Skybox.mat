@@ -26,11 +26,11 @@ Material:
     m_Floats:
     - _Exponent: 1
     - _Intensity: 1
-    - _Power: 1.65
+    - _Power: 0.89
     - _UpVectorPitch: -2.95
     - _UpVectorYaw: -6.67
     m_Colors:
     - _Color1: {r: 0, g: 0, b: 0, a: 0}
     - _Color2: {r: 1, g: 0, b: 0.10227251, a: 0}
-    - _TargetVector: {r: 0, g: -15.65, b: 0, a: 0}
+    - _TargetVector: {r: 0, g: -9.85, b: 0, a: 0}
     - _UpVector: {r: -0.8, g: 1, b: 0, a: 0}
