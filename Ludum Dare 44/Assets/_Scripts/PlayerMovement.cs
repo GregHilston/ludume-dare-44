@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         playerInputAxes[Playertypes.drone] = new string[2] {"Horizontal2", "Vertical2"};
     }
 
-    void Update() {
+    void FixedUpdate() {
         DoMovement();
     }
 
@@ -42,8 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement(string hAxis, string vAxis) {
         if (rb != null) {
-            float moveX = Input.GetAxis(hAxis);
-            float moveZ = Input.GetAxis(vAxis);
+            float moveX = Input.GetAxisRaw(hAxis);
+            float moveZ = Input.GetAxisRaw(vAxis);
             Vector3 moveDir = new Vector3(moveX,0,moveZ).normalized;
             if (moveDir != Vector3.zero) {
                 rb.MovePosition(transform.position + moveDir * moveSpeed * Time.deltaTime);
