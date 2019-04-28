@@ -1663,8 +1663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d704f14cceea4e959eee3def36e2b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolList: []
-  maxItemsInPool: 20
 --- !u!43 &569410985
 Mesh:
   m_ObjectHideFlags: 0
@@ -14989,6 +14987,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 37cf8d0158086b64c8c1fdf5ab2e5e92, type: 2}
+    - target: {fileID: 1055878768, guid: 989350724000f4b978a0883998cce12a, type: 3}
+      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 30440491}
+    - target: {fileID: 1055878768, guid: 989350724000f4b978a0883998cce12a, type: 3}
+      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateUI
+      objectReference: {fileID: 0}
     - target: {fileID: 701616106502849258, guid: 989350724000f4b978a0883998cce12a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15227,10 +15233,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 692105350, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
-      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 30440491}
     - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
       propertyPath: coinPool
       value: 
@@ -15250,5 +15252,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 271d4cab9f1ec294eb7ac996e6dd5d83, type: 2}
+    - target: {fileID: 692105350, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: OnCurrencyAmountChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 30440491}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}

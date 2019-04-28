@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2931291183072142069}
   - component: {fileID: 4476936953002748966}
   - component: {fileID: 4929626295564175141}
+  - component: {fileID: 8245999755767894480}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -106,6 +107,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!65 &8245999755767894480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4429456578276287671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.08, z: 1}
+  m_Center: {x: 0, y: -0.025, z: 0}
 --- !u!1 &6164413101941554871
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +132,6 @@ GameObject:
   - component: {fileID: 7159682730646075512}
   - component: {fileID: 1007495809502671087}
   - component: {fileID: 4394271562680610319}
-  - component: {fileID: 3711703852216814154}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -134,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6164413101941554871}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 802712288413488804}
@@ -204,16 +217,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &3711703852216814154
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6164413101941554871}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.019954255, y: 0.01995426, z: 0.0012000467}
-  m_Center: {x: 0, y: 0, z: 0.00060002337}

@@ -9,6 +9,7 @@ public class Coin : MonoBehaviour {
 
     private float throwSpeed;
     private bool throwCoin;
+    public int coinDamage{get;}
 
     void Start() {
         rb = GetComponent<Rigidbody>();
