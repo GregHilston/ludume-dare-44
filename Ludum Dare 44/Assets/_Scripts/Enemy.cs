@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.AI;
 
 
 public class Enemy : MonoBehaviour {
@@ -18,8 +19,28 @@ public class Enemy : MonoBehaviour {
 
     public UnityEvent onEnemyDeath;
 
+    private Transform target;
+    private NavMeshAgent nav;
+
+    private float damageTimer;
+
     void Start() {
         curHealth = enemy.MaxHealth;
+        nav = GetComponent<NavMeshAgent>();
+        target = FindObjectOfType<PlayerMain>().transform;
+    }
+    
+    void Update() {
+        FollowPlayer();
+        DamageTimer();
+    }
+
+    void FollowPlayer() {
+        if (nav != null) {
+            nav.SetDestination(target.position);
+        } else  {
+            Debug.LogError( gameObject.name + "does not have NavMeshAgent attached");
+        }
     }
 
     public void ChangeHealth(int amount) {
@@ -48,7 +69,7 @@ public class Enemy : MonoBehaviour {
     void OnTriggerEnter(Collider col) {
         Coin coin = col.GetComponent<Coin>();
         if (coin != null) {
-            ChangeHealth(coin.coinDamage);
+            ChangeHealth(coin.CoinDamage);
             ObjectPoolReference opf = col.GetComponent<ObjectPoolReference>();
             if (opf != null) {
                 opf.returnToPool();
@@ -56,5 +77,34 @@ public class Enemy : MonoBehaviour {
                 Destroy(coin.gameObject);
             }
         }
+    }
+
+    void OnTriggerStay(Collider col) {
+        PlayerMain player = col.GetComponent<PlayerMain>();
+        if (player != null) {
+            if (damageTimer <= 0) {
+                DamagePlayer();
+            }
+        }
+    }
+
+    void DamageTimer() {
+        if (damageTimer > 0) {
+            damageTimer -= Time.deltaTime;
+            damageTimer = Mathf.Clamp(damageTimer,0,damageTimer);
+        }
+    }
+
+    void ResetDamageTimer() {
+        damageTimer = enemy.DamageRate;
+    }
+
+    void DamagePlayer() {
+        PlayerCurrency playerCurrency = FindObjectOfType<PlayerCurrency>();
+        if (playerCurrency != null) {
+            playerCurrency.ChangeCurrency(-enemy.DamageAmount);
+            ResetDamageTimer();
+        }
+
     }
 }
