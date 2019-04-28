@@ -16,6 +16,10 @@ public class MySceneManager : MonoBehaviour {
         SceneManager.LoadScene("Game");
     }
 
+    public void ToDeath() {
+        SceneManager.LoadScene("DeathMenu");
+    }
+
     public void ToExit() {
         Debug.Log("Navigating To Exit Game!");
 
