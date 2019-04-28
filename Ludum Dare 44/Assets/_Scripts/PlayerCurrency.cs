@@ -40,11 +40,11 @@ public class PlayerCurrency : MonoBehaviour {
         currencyAmount = Mathf.Clamp(currencyAmount,0,currencyAmount);
         OnCurrencyAmountChange.Invoke(currencyAmount);
         if (currencyAmount <= 0) {
-            Debug.Log("NO MONEY");
-            if (FindObjectsOfType<CoinStack>().Length <= 0) {
-                Debug.Log("NO MONEY STACKS");
+            //Debug.Log("NO MONEY");
+            //if (FindObjectsOfType<CoinStack>().Length <= 0) {
+                //Debug.Log("NO MONEY STACKS");
                 OnPlayerDeath.Invoke();
-            }
+            //}
         }
     }
 
