@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MySceneManager : MonoBehaviour {
+    [SerializeField]
+    GameObject deathMenuToEnableLater;
+
     public void ToMainMenu() {
         Debug.Log("Navigating To Main Menu!");
 
@@ -17,7 +20,9 @@ public class MySceneManager : MonoBehaviour {
     }
 
     public void ToDeath() {
-        SceneManager.LoadScene("DeathMenu");
+        Debug.Log("Showing Death Menu");
+
+        deathMenuToEnableLater.SetActive(true);
     }
 
     public void ToExit() {

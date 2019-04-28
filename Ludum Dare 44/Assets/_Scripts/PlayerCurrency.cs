@@ -18,7 +18,10 @@ public class PlayerCurrency : MonoBehaviour {
     [SerializeField]
     private int startingCurrency = 100;
 
+    private int highestCurreny;
+
     void Start() {
+        this.highestCurreny = this.startingCurrency;
         ChangeCurrency(startingCurrency);
     }
 
@@ -35,16 +38,21 @@ public class PlayerCurrency : MonoBehaviour {
         return currencyAmount;
     }
 
+    public int GetHigestCurreny() {
+        return this.highestCurreny;
+    }
+
     public void ChangeCurrency(int amount) {
         currencyAmount += amount;
-        currencyAmount = Mathf.Clamp(currencyAmount,0,currencyAmount);
+        currencyAmount = Mathf.Clamp(currencyAmount, 0, currencyAmount);
+
+        if (currencyAmount > this.highestCurreny) {
+            this.highestCurreny = currencyAmount;
+        }
+
         OnCurrencyAmountChange.Invoke(currencyAmount);
         if (currencyAmount <= 0) {
-            //Debug.Log("NO MONEY");
-            //if (FindObjectsOfType<CoinStack>().Length <= 0) {
-                //Debug.Log("NO MONEY STACKS");
-                OnPlayerDeath.Invoke();
-            //}
+            OnPlayerDeath.Invoke();
         }
     }
 
