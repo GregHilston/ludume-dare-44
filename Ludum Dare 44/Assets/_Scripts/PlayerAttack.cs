@@ -35,7 +35,7 @@ public class PlayerAttack : MonoBehaviour {
 
     void Initialize() {
         currency = GetComponent<PlayerCurrency>();
-        playerAttacks.Add("Custom1",DoOneShot);
+        playerAttacks.Add("Left Controller Trigger", DoOneShot);
         playerAttacks.Add("Custom2",DoMultiShot);
     }
 
@@ -46,7 +46,8 @@ public class PlayerAttack : MonoBehaviour {
     void Attack() {
         if (attackReady()) {
             foreach(string input in playerAttacks.Keys) {
-                if (Input.GetButtonDown(input)) {
+                Debug.Log($"Attack input {input} has value of {Input.GetAxis(input)}");
+                if (Input.GetAxis(input) > 0.0f) {
                     playerAttacks[input]();
                 }
             }
