@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.AI;
 
 
 public class Enemy : MonoBehaviour {
@@ -18,8 +19,25 @@ public class Enemy : MonoBehaviour {
 
     public UnityEvent onEnemyDeath;
 
+    private Transform target;
+    private NavMeshAgent nav;
+
     void Start() {
         curHealth = enemy.MaxHealth;
+        nav = GetComponent<NavMeshAgent>();
+        target = FindObjectOfType<PlayerMain>().transform;
+    }
+    
+    void Update() {
+        FollowPlayer();
+    }
+
+    void FollowPlayer() {
+        if (nav != null) {
+            nav.SetDestination(target.position);
+        } else  {
+            Debug.LogError( gameObject.name + "does not have NavMeshAgent attached");
+        }
     }
 
     public void ChangeHealth(int amount) {
@@ -55,6 +73,10 @@ public class Enemy : MonoBehaviour {
             } else {
                 Destroy(coin.gameObject);
             }
+        }
+        PlayerMain player = col.GetComponent<PlayerMain>();
+        if (player != null) {
+            
         }
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 177073335607594103}
   - component: {fileID: 8569625619150558465}
   - component: {fileID: 6604511455144093969}
+  - component: {fileID: 7932795136857407992}
   m_Layer: 0
   m_Name: blobShape
   m_TagString: Untagged
@@ -92,6 +93,19 @@ CapsuleCollider:
   m_Height: 2.6457326
   m_Direction: 1
   m_Center: {x: 0.32968307, y: 1.2895185, z: 0.22877574}
+--- !u!135 &7932795136857407992
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3062429602817345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5791792
+  m_Center: {x: 0.32968307, y: 1.5458313, z: 0.2287758}
 --- !u!1 &205895036570942935
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +117,7 @@ GameObject:
   - component: {fileID: 6627723626071990545}
   - component: {fileID: 205895036570942936}
   - component: {fileID: 852269984}
+  - component: {fileID: 5270729667892405127}
   m_Layer: 0
   m_Name: blob
   m_TagString: Untagged
@@ -118,7 +133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205895036570942935}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.8318858, y: 0.04987067, z: -0.056555435}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6558486286801968573}
@@ -159,6 +174,28 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!195 &5270729667892405127
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205895036570942935}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7875234644274988164
 GameObject:
   m_ObjectHideFlags: 0
