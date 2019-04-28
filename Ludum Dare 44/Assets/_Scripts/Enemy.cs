@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour {
 
     public void StaticDrops() {
         foreach(GameObject obj in enemy.StaticDrops) {
-            Instantiate(obj,transform.position,transform.rotation);
+            Instantiate(obj,transform.position,transform.rotation).SetActive(true);
         }
     }
 
