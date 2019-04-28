@@ -11,9 +11,7 @@ public class RandomEnemySpawner : MonoBehaviour {
     private float maximumSecondsToWait = 5.0f;
 
     void Start() {
-        while (true) {
-            this.spawnRandomEnemyAtRandomChildTransform();
-        }
+        StartCoroutine(this.spawnRandomEnemyAtRandomChildTransform());
     }
 
     IEnumerator spawnRandomEnemyAtRandomChildTransform() {
@@ -21,7 +19,7 @@ public class RandomEnemySpawner : MonoBehaviour {
             GameObject randomEnemy = this.getRandomEnemy();
             Vector3 randomLocation = this.getRandomChildPosition();
 
-            if (randomEnemy != null && randomLocation != null) {
+            if (randomEnemy != null) {
                 Debug.Log($"Spawned random enemy {randomEnemy.name} at position {randomLocation}");
                 Instantiate(randomEnemy, randomLocation, Quaternion.identity);
             }
@@ -56,6 +54,6 @@ public class RandomEnemySpawner : MonoBehaviour {
             Debug.LogError($"Attempted to get child at index {randomIndex} from array this.transform.GetChild, but this array only has {this.possibleEnemiesToSpawn.Length} elements");
         }
 
-        return null;
+        return new Vector3(0, 0, 10); // starting location
     }
 }
