@@ -66,9 +66,7 @@ Enemies Moving
 
 Meet Marsh, Our Stretch Goal Character
 
-<p align="center">
-  ![Meet Marsh, Our Stretch Goal Character](https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/marsh.gif)
-</p>
+![Meet Marsh, Our Stretch Goal Character](https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/marsh.gif)
 
 Using Material Nodes
 
