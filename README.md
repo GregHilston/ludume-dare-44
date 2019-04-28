@@ -80,6 +80,6 @@ Using Material Nodes
 
 The following team members made up our group:
 
-- [Derk Sharp]: Software Engineer](https://github.com/downhillGames)
+- [Derk Sharp: Software Engineer](https://github.com/downhillGames)
 - [Greg Hilston: Artist and Backup Software Engineer](https://github.com/SharpDerek)
 - [Roldan Melcon: Artist and Shader Guru](https://www.github.com/kethalak)
