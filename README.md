@@ -64,12 +64,6 @@ Enemies Moving
   <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/enemies_moving.m4v">
 </p>
 
-Enemies Spawning
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/masterCaptures/enemies_spawning.gif">
-</p>
-
 Our Stretch Goal Character
 
 <p align="center">
