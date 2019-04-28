@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using TMPro;
 
 public class MySceneManager : MonoBehaviour {
     [SerializeField]
     GameObject deathMenuToEnableLater;
+    [SerializeField]
+    GameObject gameObjectContainingTextMeshProButton;
+    [SerializeField]
+    EventSystem eventSystem;
 
     public void ToMainMenu() {
         Debug.Log("Navigating To Main Menu!");
@@ -23,6 +30,9 @@ public class MySceneManager : MonoBehaviour {
         Debug.Log("Showing Death Menu");
 
         deathMenuToEnableLater.SetActive(true);
+        // gameObjectContainingTextMeshProButton.GetComponent<TextMeshProUGUI>().
+
+        eventSystem.SetSelectedGameObject(gameObjectContainingTextMeshProButton, null);
     }
 
     public void ToExit() {

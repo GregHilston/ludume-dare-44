@@ -2330,6 +2330,16 @@ PrefabInstance:
       propertyPath: deathMenuToEnableLater
       value: 
       objectReference: {fileID: 1020061911}
+    - target: {fileID: 110427814781829628, guid: 0e0131415c2974a3caa5e9ce9c631bcb,
+        type: 3}
+      propertyPath: gameObjectContainingTextMeshProButton
+      value: 
+      objectReference: {fileID: 1117841960}
+    - target: {fileID: 110427814781829628, guid: 0e0131415c2974a3caa5e9ce9c631bcb,
+        type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 1705955833}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e0131415c2974a3caa5e9ce9c631bcb, type: 3}
 --- !u!1 &678821615
@@ -14486,6 +14496,18 @@ Transform:
   m_Father: {fileID: 445797724}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
+--- !u!114 &1705955833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1179954804847122811, guid: 9e45df04279d34f488b7e345ae8b4a54,
+    type: 3}
+  m_PrefabInstance: {fileID: 1117841959}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1712034564
 GameObject:
   m_ObjectHideFlags: 0
