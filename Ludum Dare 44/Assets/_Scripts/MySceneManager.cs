@@ -5,6 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MySceneManager : MonoBehaviour {
     public void ToMainMenu() {
+        Debug.Log("Navigating To Main Menu!");
+
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ToGame() {
+        Debug.Log("Navigating To Game!");
+
+        // TODO Load Scene for gameplay
+    }
+
+    public void ToExit() {
+        Debug.Log("Navigating To Exit Game!");
+
+        Application.Quit();
     }
 }
