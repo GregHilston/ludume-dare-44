@@ -13,7 +13,7 @@ public class MySceneManager : MonoBehaviour {
     public void ToGame() {
         Debug.Log("Navigating To Game!");
 
-        // TODO Load Scene for gameplay
+        SceneManager.LoadScene("Game");
     }
 
     public void ToExit() {

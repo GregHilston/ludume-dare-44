@@ -41,4 +41,13 @@ public class Coin : MonoBehaviour {
         }
     }
 
+    void OnTriggerEnter(Collider col) {
+        // If a coin hits a wall, the coin should be made no longer active
+        MeshCollider mC = col.GetComponent<MeshCollider>();
+        if (mC != null) {
+            if (mC.gameObject.name.Contains("Cube")) {
+                this.gameObject.SetActive(false);
+            }
+        }
+    }
 }
