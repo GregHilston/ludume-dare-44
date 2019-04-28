@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour {
     private Transform target;
     private NavMeshAgent nav;
 
+    private float damageTimer;
+
     void Start() {
         curHealth = enemy.MaxHealth;
         nav = GetComponent<NavMeshAgent>();
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour {
     
     void Update() {
         FollowPlayer();
+        DamageTimer();
     }
 
     void FollowPlayer() {
@@ -74,9 +77,34 @@ public class Enemy : MonoBehaviour {
                 Destroy(coin.gameObject);
             }
         }
+    }
+
+    void OnTriggerStay(Collider col) {
         PlayerMain player = col.GetComponent<PlayerMain>();
         if (player != null) {
-            
+            if (damageTimer <= 0) {
+                DamagePlayer();
+            }
         }
+    }
+
+    void DamageTimer() {
+        if (damageTimer > 0) {
+            damageTimer -= Time.deltaTime;
+            damageTimer = Mathf.Clamp(damageTimer,0,damageTimer);
+        }
+    }
+
+    void ResetDamageTimer() {
+        damageTimer = enemy.DamageRate;
+    }
+
+    void DamagePlayer() {
+        PlayerCurrency playerCurrency = FindObjectOfType<PlayerCurrency>();
+        if (playerCurrency != null) {
+            playerCurrency.ChangeCurrency(-enemy.DamageAmount);
+            ResetDamageTimer();
+        }
+
     }
 }

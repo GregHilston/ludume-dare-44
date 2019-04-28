@@ -25,6 +25,24 @@ public class EnemyObject : ScriptableObject {
     }
     
     [SerializeField]
+    [Tooltip("Enemy Damage Rate")]
+    private float damageRate;
+    public float DamageRate {
+        get {
+            return damageRate;
+        }
+    }
+    
+    [SerializeField]
+    [Tooltip("Enemy Damage Amount")]
+    private int damageAmount;
+    public int DamageAmount {
+        get {
+            return damageAmount;
+        }
+    }
+    
+    [SerializeField]
     [Tooltip("Enemy Movement Speed")]
     private float moveSpeed;
     public float MoveSpeed {
