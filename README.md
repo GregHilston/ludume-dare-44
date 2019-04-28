@@ -43,7 +43,7 @@ Coin
 Coin Rotating
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/Coin_Rotating.m4v">
+  ![Coin Rotating](https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/Coin_Rotating.m4v)
 </p>
 
 Slimes
