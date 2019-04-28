@@ -35,12 +35,6 @@ public class ObjectPool : MonoBehaviour {
         poolDict[type].Add(poolItem);
     }
 
-    public void RemoveItemFromPool(GameObject type, ObjectPoolItem poolItem) {
-        if (PoolExists(type)) {
-            poolDict[type].Remove(poolItem);   
-        }
-    }
-
     public void ClearAllPools() {
         foreach(GameObject key in poolDict.Keys) {
             ClearPool(key);
@@ -67,23 +61,33 @@ public class ObjectPool : MonoBehaviour {
     }
 
     public GameObject GetObjectFromPool(GameObject type, Vector3 position, Quaternion rotation, Transform parent) {
-        ObjectPoolItem returnItem = null;
-        if (PoolExists(type)) {
-            if (poolDict[type].Count > 0) {
-                returnItem = poolDict[type][0];
-            } else {
-                returnItem = CreateItemToPool(type);
-            }
+        GameObject returnItem = null;
+
+        // we've never seen an item of this type before, so we'll write it back in our pool and create one now
+        if (!PoolExists(type)) {
+            returnItem = CreateItemToPool(type).itemInstance;
         } else {
-            returnItem = CreateItemToPool(type);
+            for (int i = 0; i < poolDict[type].Count; i++) {
+                GameObject potentiallyNotActiveItemPooled = poolDict[type][i].itemInstance;
+
+                if (!potentiallyNotActiveItemPooled.activeInHierarchy) {
+                    returnItem = potentiallyNotActiveItemPooled;
+                    break; // found a non active item, no need to make another
+                }
+            }
+
+            // if we didn't find an already existing item that is not active, we'll create one
+            if (returnItem == null) {
+                returnItem = CreateItemToPool(type).itemInstance;
+            }
         }
+
         if (returnItem != null) {
-            returnItem.itemInstance.transform.position = position;
-            returnItem.itemInstance.transform.rotation = rotation;
-            RemoveItemFromPool(type,returnItem);
-            returnItem.itemInstance.SetActive(true);
+            returnItem.transform.position = position;
+            returnItem.transform.rotation = rotation;
+            returnItem.SetActive(true);
         }
-        return returnItem.itemInstance;
+        return returnItem;
     }
 
 }
