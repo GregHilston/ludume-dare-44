@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Thunder Slime
   maxHealth: 100
   damageRate: 0
-  damageAmount: 50
+  damageAmount: 25
   moveSpeed: 2
   prefab: {fileID: 1220395768180561665, guid: d99cf7a0c2de2426c80bb1a40ee27c72, type: 3}
   staticDrops:

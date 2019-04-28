@@ -15,7 +15,7 @@ public class RandomEnemySpawner : MonoBehaviour {
     }
 
     IEnumerator spawnRandomEnemyAtRandomChildTransform() {
-        while (true) {
+        while (FindObjectOfType<PlayerMain>() != null) {
             GameObject randomEnemy = this.getRandomEnemy();
             Vector3 randomLocation = this.getRandomChildPosition();
 

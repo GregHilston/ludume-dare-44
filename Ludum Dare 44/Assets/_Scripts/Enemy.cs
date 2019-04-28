@@ -28,11 +28,18 @@ public class Enemy : MonoBehaviour {
         curHealth = enemy.MaxHealth;
         nav = GetComponent<NavMeshAgent>();
         target = FindObjectOfType<PlayerMain>().transform;
+        if (target == null) {
+            Destroy(gameObject);
+        }
     }
     
     void Update() {
         FollowPlayer();
         DamageTimer();
+        
+        if (target == null) {
+            Destroy(gameObject);
+        }
     }
 
     void FollowPlayer() {
