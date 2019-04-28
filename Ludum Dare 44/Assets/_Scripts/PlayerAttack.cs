@@ -74,9 +74,13 @@ public class PlayerAttack : MonoBehaviour {
 
     void DoMultiShot() {
         float startingAngle = transform.rotation.eulerAngles.y - ( multiShotRange / 2);
-        float angleBetweenShots = multiShotRange / (numShotsInMulti - 1);
+        int numShots = numShotsInMulti;
+        if (numShotsInMulti > currency.GetCurrency()) {
+            numShots = currency.GetCurrency();
+        }
+        float angleBetweenShots = multiShotRange / (numShots - 1);
 
-        for (int i = 0; i < numShotsInMulti; i++) {
+        for (int i = 0; i < numShots; i++) {
             OneShot(Quaternion.Euler(Vector3.up * (startingAngle + (angleBetweenShots * i))));
         }
 

@@ -449,7 +449,11 @@ PrefabInstance:
       objectReference: {fileID: 556737270}
     - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
       propertyPath: numShotsInMulti
-      value: 3
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 456335021, guid: a38ffa918be2c458786c5bda1d93730a, type: 3}
+      propertyPath: multiShotRange
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6891482792962350108, guid: a38ffa918be2c458786c5bda1d93730a,
         type: 3}
