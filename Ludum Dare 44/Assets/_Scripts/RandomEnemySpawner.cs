@@ -20,13 +20,11 @@ public class RandomEnemySpawner : MonoBehaviour {
             Vector3 randomLocation = this.getRandomChildPosition();
 
             if (randomEnemy != null) {
-                Debug.Log($"Spawned random enemy {randomEnemy.name} at position {randomLocation}");
                 Instantiate(randomEnemy, randomLocation, Quaternion.identity);
             }
 
             float secondsToWait = Random.Range(this.minimumSecondsToWait, this.maximumSecondsToWait);
 
-            Debug.Log($"Waiting {secondsToWait} seconds till we spawn another enemy");
             yield return new WaitForSeconds(secondsToWait);
         }
     }
