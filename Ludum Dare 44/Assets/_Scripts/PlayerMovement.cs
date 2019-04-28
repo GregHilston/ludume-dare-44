@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
             float moveX = Input.GetAxis(hAxis);
             float moveZ = Input.GetAxis(vAxis);
             Vector3 moveDir = new Vector3(moveX,0,moveZ).normalized;
-            
             if (moveDir != Vector3.zero) {
                 rb.MovePosition(transform.position + moveDir * moveSpeed * Time.deltaTime);
                 rb.MoveRotation(Quaternion.Euler(rotationFromInput(moveX,moveZ)));
