@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Jumbo Slime
   maxHealth: 25
-  damageRate: 3
-  damageAmount: 0
+  damageRate: 0
+  damageAmount: 5
   moveSpeed: 7
   prefab: {fileID: 989233464315041958, guid: c55a1908115a64c03a2536bf588c4f16, type: 3}
   staticDrops:
