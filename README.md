@@ -42,9 +42,7 @@ Coin
 
 Coin Rotating
 
-<p align="center">
-  ![Coin Rotating](https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/Coin_Rotating.m4v)
-</p>
+![Coin Rotating](https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/coin_rotating.gif)
 
 Slimes
 
@@ -54,15 +52,12 @@ Slimes
 
 Slime Moving
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/slime_moving.m4v">
-</p>
+![Slime Moving](https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/slime_moving.gif)
+
 
 Enemies Moving
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/enemies_moving.m4v">
-</p>
+![Slime Moving](https://raw.githubusercontent.com/GregHilston/ludume-dare-44/master/Captures/enemies_moving.gif)
 
 Meet Marsh, Our Stretch Goal Character
 
